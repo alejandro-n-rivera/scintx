@@ -12,7 +12,7 @@ Before merging a pull request:
 - Meet the verified commit signature and Eclipse contributor-agreement
   requirements. Use the commit author email associated with the contributor's
   Eclipse Foundation account, as described in [CONTRIBUTING.md](../CONTRIBUTING.md).
-- Once the proposed required status check is enabled, pass `eclipsefdn/eca`.
+- Confirm that `eclipsefdn/eca`, reported by the Eclipse ECA Validation app, passes.
 
 Reviewers should check the following where applicable:
 
@@ -28,16 +28,9 @@ Reviewers should check the following where applicable:
   AI assistance and have a human verify the contribution under the
   [Eclipse Project Handbook](https://www.eclipse.org/projects/handbook/).
 
-## Proposed required status check
-
-`eclipsefdn/eca`, reported by the Eclipse ECA Validation app, is the sole status
-check proposed for enforcement. It verifies contributor-agreement coverage.
-
 ## CI and security evidence for reviewers
 
-Existing CI and security workflows continue to run. Reviewers can consult their
-results when assessing a change; these checks are not proposed as required
-status checks in the companion ruleset change.
+Reviewers can consult the CI and security workflow results when assessing a change.
 
 | GitHub check | Source | Purpose |
 | --- | --- | --- |
@@ -50,25 +43,10 @@ CI reports coverage for review. Scorecard and release SBOM workflows retain
 their existing triggers. Dependency security and IP review remain part of the
 review when relevant.
 
-## Otterdog configuration and rollout
-
-SCINTX repository settings are managed by [Otterdog](https://github.com/eclipse-scintx/.eclipsefdn/blob/main/otterdog/eclipse-scintx.jsonnet).
-The default-branch ruleset requires pull requests, verified commit signatures,
-one approval, and applicable code-owner reviews. The [companion configuration
-proposal](https://github.com/eclipse-scintx/.eclipsefdn/pull/2) preserves these
-requirements and adds only the Eclipse ECA Validation app's `eclipsefdn/eca`
-status as a required check.
-
-Before applying that proposal, confirm that `eclipsefdn/eca` reports on a SCINTX
-pull request under its exact context and from the Eclipse ECA Validation app.
-No workflow change or prior merge of this documentation PR is needed to enable
-that existing status. Preserve verified signatures when rewriting commits.
-
 ## References
 
 - [Eclipse Project Handbook](https://www.eclipse.org/projects/handbook/)
 - [Eclipse Committer Due Diligence Guidelines](https://www.eclipse.org/legal/committer-guidelines/)
 - [Eclipse Security Handbook: Rapid Security Review](https://eclipse-csi.github.io/security-handbook/project/reviews.html)
 - [GitHub ruleset rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets)
-- [Otterdog branch protection](https://otterdog.readthedocs.io/en/latest/userguide/guides/branch-protection/)
 - [OpenSSF Scorecard branch protection](https://github.com/ossf/scorecard/blob/main/docs/checks.md#branch-protection)
