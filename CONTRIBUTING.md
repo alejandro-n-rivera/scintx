@@ -59,8 +59,8 @@ make build
 make check
 ```
 
-Use `make help` for development targets, the [README](README.md) to run the
-project, and the [extension guide](docs/EXTENSIONS.md) to develop an adapter.
+Use `make help` for development targets and see the [README](README.md) for
+instructions on running the project.
 Keep virtual environments, local configuration, and credentials out of commits.
 
 ## Submitting a pull request
